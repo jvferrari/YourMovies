@@ -10,29 +10,26 @@ const apiKey = import.meta.env.VITE_API_KEY;
 
 
 const Home = () => {
-    const [bestMovies, setBestMovies] = useState([])
+    const [nowMovies, setNowMovies] = useState([])
 
-    const getTopRatedMovies = async (url) => {
+    const getNowMovies = async (url) => {
         const res = await fetch(url);
         const data = await res.json();
-        setBestMovies(data.results);
+        setNowMovies(data.results);
       };
 
       useEffect(() => {
-        const topRatedUrl = `${YourMoviesURL}top_rated?${apiKey}`;
-        console.log(topRatedUrl);
-        getTopRatedMovies(topRatedUrl);
+        const nowMoviesUrl = `${YourMoviesURL}now_playing?${apiKey}`;
+        console.log(nowMoviesUrl);
+        getNowMovies(nowMoviesUrl);
       }, []);
 
-      console.log(bestMovies);
+      console.log(nowMovies);
 
       return (
-        <div className="container">
-          <h2 className="title">Melhores filmes:</h2>
-          <div className="movies-container">
-            {bestMovies.length > 0 &&
-              bestMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
-          </div>
+        <div className="movies-container">
+          {nowMovies.length > 0 &&
+            nowMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
         </div>
       );
     };
