@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import {BrowserRouter, Routes, Route} from "react-router-dom"; 
 
 import App from './App';
+import BestMovies from './pages/BestMovies';
 import Home from './pages/Home';
 import Movie from './pages/Movie';
 import Search from './pages/Search';
@@ -14,6 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
      <Routes>
       <Route element={<App />}>
+        <Route path="/melhoresfilmes" element={<BestMovies />} />
         <Route path="/" element={<Home />} />
         <Route path="movie/:id" element={<Movie />} />
         <Route path="search" element={<Search />} />
