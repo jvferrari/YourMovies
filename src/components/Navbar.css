@@ -24,6 +24,77 @@
   gap: 0.5rem;
 }
 
+/* Estilos do botão switch */
+.switch {
+  align-items: center;
+  gap: 0.5rem;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  background-color: #ccc;
+  border-radius: 20px;
+}
+
+.switch-input {
+  display: none;
+}
+
+.switch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 17px;
+}
+
+.switch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease;
+}
+
+.switch-inner::before,
+.switch-inner::after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 34px;
+  padding: 0;
+  line-height: 34px;
+  font-size: 14px;
+  color: #f7d354;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.switch-inner::before {
+  content: "Dark";
+  padding-left: 10px;
+  background-color: #121212;
+}
+
+.switch-inner::after {
+  content: "Light";
+  padding-right: 13px;
+  background-color: #121212;
+  text-align: right;
+}
+
+.switch-input:checked + .switch-label .switch-inner {
+  margin-left: 0;
+}
+
+.switch-input:checked + .switch-label::before {
+  background-color: #fff;
+  color: #000;
+}
+
+.switch-input:checked + .switch-label::after {
+  background-color: #000;
+  color: #fff;
+}
+
+
 #navbar form {
   display: flex;
   gap: 0.5rem;
@@ -52,3 +123,5 @@
   background-color: transparent;
   color: #f7d354;
 }
+
+

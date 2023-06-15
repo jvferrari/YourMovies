@@ -14,6 +14,7 @@ import "./Movie.css";
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 
+
 const Movie = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
@@ -36,6 +37,7 @@ const Movie = () => {
     const movieUrl = `${moviesURL}${id}?${apiKey}`;
     getMovie(movieUrl);
   }, []);
+    
 
   return (
     <div className="movie-page">
@@ -43,6 +45,7 @@ const Movie = () => {
         <>
           <MovieCard movie={movie} showLink={false} />
           <p className="tagline">{movie.tagline}</p>
+          
           <div className="info">
             <h3>
               <BsWallet2 /> Orçamento:

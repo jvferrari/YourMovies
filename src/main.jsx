@@ -7,6 +7,9 @@ import BestMovies from './pages/BestMovies';
 import Home from './pages/Home';
 import Movie from './pages/Movie';
 import Search from './pages/Search';
+import Erro from './pages/Erro';
+import Myfavs from './pages/Myfavs';
+
 
 import './index.css';
 
@@ -19,6 +22,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/" element={<Home />} />
         <Route path="movie/:id" element={<Movie />} />
         <Route path="search" element={<Search />} />
+        <Route path="meusfavs" element={<Myfavs />} />
+        <Route path="*" element={ <Erro/> } />
       </Route>
      </Routes>
     </BrowserRouter>
