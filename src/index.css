@@ -17,12 +17,12 @@
 
     /* Estilos para o tema dark */
 body.theme-dark {
-  background-color: #000;
+  background-color: #19191d;
   color: #fff;
 }
 
 /* Estilos para o tema light */
 body.theme-light {
-  background-color: #ffffff;
+  background-color: #f0ebf9;
   color: #000;
 }

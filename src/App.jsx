@@ -3,8 +3,6 @@ import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import { useStore } from "./components/themeStore";
 
-import "./App.css";
-
 function App() {
     const { theme } = useStore();
   
