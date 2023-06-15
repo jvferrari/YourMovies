@@ -70,6 +70,8 @@ const Movie = () => {
             </h3>
             <p>{movie.overview}</p>
           </div>
+          <div className="area-buttons">
+        </div>
         </>
       )}
     </div>
