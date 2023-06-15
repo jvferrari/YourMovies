@@ -58,7 +58,7 @@
   text-align: center;
   font-weight: bold;
   transition: 0.4s;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem; 
 }
 
 .movies-container .movie-card a:hover,

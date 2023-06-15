@@ -41,21 +41,6 @@ const Navbar = () => {
           MEUS FAVORITOS
         </Link>
       </h5>
-      <div className="switch">
-        <input
-          className="switch-input"
-          type="checkbox"
-          checked={theme === "dark"}
-          onChange={toggleTheme}
-        />
-        <label className="switch-label">
-          <span className="switch-inner"></span>
-          <button onClick={handleThemeToggle}>
-        {theme === "" ? "" : ""}
-      </button>
-        </label>
-        
-      </div>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -67,8 +52,23 @@ const Navbar = () => {
           <BiSearchAlt2 />
         </button>
       </form>
+      <div className="switch">
+        <input
+          className="switch-input"
+          type="checkbox"
+          checked={theme === "dark"}
+          onChange={toggleTheme}
+        />
+        <label className="switch-label">
+          <span className="switch-inner"></span>
+          <button onClick={handleThemeToggle}>
+            {theme === "" ? "" : ""}
+          </button>
+        </label>
+
+      </div>
     </nav>
- 
+
   );
 };
 
